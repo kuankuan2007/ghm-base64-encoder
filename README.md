@@ -38,7 +38,7 @@ ABC                                              <mark>数据块2</mark>
 
 ABC                                              <mark>数据块3</mark>
 
-#END OF DOCUMENT              <mark>头部标注行</mark>
+#END OF DOCUMENT              <mark>尾部标注行</mark>
 
 ## 软件使用
 
