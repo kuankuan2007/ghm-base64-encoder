@@ -42,7 +42,7 @@ ABC                                              <mark>数据块3</mark>
 
 ## 软件使用
 
-支持文本、选择文件、拖拽文件打开
+支持文本、选择文件、拖拽文件、拖拽文件给exe(作为启动参数)打开
 
 文件会要求选择保存文件夹
 
@@ -51,11 +51,3 @@ ABC                                              <mark>数据块3</mark>
 作者[宽宽2007](kuankuan2007.gitee.io "作者主页")
 
 本项目在[苟浩铭/ghm-base64编码器 (gitee.com)](https://gitee.com/kuankuan2007/ghm-base64-encoder)上开源
-
-
-
-
-
-
-
-
