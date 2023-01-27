@@ -225,8 +225,27 @@ def draggedFiles(files):
     for i in range(len(files)):
         files[i] = files[i].decode("ansi")
     doFiles(files)
-
-
+def doArgv():
+    argv=sys.argv
+    if len(argv)==1:
+        return
+    argv =argv[1:]
+    for i in range(len(argv)):
+        if argv[i] in ["-h","help","/h","/?","/help"]:
+            os.system("start https://gitee.com/kuankuan2007/ghm-base64-encoder")
+            return
+        else:
+            files=[]
+            for i in argv:
+                try:
+                    with open(i,"rb") as f:
+                        f.read()
+                except:
+                    messagebox.showerror("错误",i+"不是一个可以打开的文件")
+                else:
+                    files.append(i)
+    if len(files)>=1:
+        doFiles(files)
 
 mainScreen=tkinter.Tk()
 mainScreen.iconbitmap(resource_path(os.path.join("logo.ico")))
@@ -442,5 +461,5 @@ aboutButton=ttk.Button(decodeButtonFrame,text="关于",command=aboutBooter)
 aboutButton.grid(row=0,column=0,sticky="E")
 
 windnd.hook_dropfiles(mainScreen, func=draggedFiles)
-
+threading.Thread(target=doArgv,daemon=True).start()
 mainScreen.mainloop()
