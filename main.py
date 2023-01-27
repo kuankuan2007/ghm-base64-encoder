@@ -36,50 +36,67 @@ def aboutShower():
 
     createrTitle=tkinter.Label(messageBox,text="作者:")
     createrTitle.grid(row=0,column=0,sticky="W",pady=2)
-    creater=ttk.Entry(messageBox)
+    creater=tkinter.Entry(messageBox)
     creater.insert(0,"宽宽")
     creater.config(state="readonly")
     creater.grid(row=0,column=1,sticky="W")
 
+    openSourceTitle=tkinter.Label(messageBox,text="开源地址")
+    openSourceTitle.grid(row=1,column=0,sticky="W",pady=2)
+    openSource=tkinter.Entry(messageBox,fg="blue",cursor="hand2")
+    def startOpenSorce(event):
+        os.system("start https://gitee.com/kuankuan2007/ghm-base64-encoder/")
+    openSource.bind("<Button-1>", startOpenSorce)
+    openSource.insert(0,"gitee")
+    openSource.config(state="readonly")
+    openSource.grid(row=1,column=1,sticky="W")
+
+    helpTitle=tkinter.Label(messageBox,text="帮助")
+    helpTitle.grid(row=2,column=0,sticky="W",pady=2)
+    help=tkinter.Entry(messageBox,fg="blue",cursor="hand2")
+    help.insert(0,"帮助文档")
+    def startHelp(event):
+        os.system("start https://kuankuan2007.gitee.io/docs/ghm-base64-encoder/")
+    help.bind("<Button-1>", startHelp)
+    help.config(state="readonly")
+    help.grid(row=2,column=1,sticky="W")
+
     createrQQTitle=tkinter.Label(messageBox,text="作者QQ:")
-    createrQQTitle.grid(row=1,column=0,sticky="W",pady=2)
-    createrQQ=tkinter.Entry(messageBox,fg="blue")
+    createrQQTitle.grid(row=3,column=0,sticky="W",pady=2)
+    createrQQ=tkinter.Entry(messageBox)
     createrQQ.insert(0,"2163826131")
-    def startAddQQ(event):
-        os.system("start https://qm.qq.com/cgi-bin/qm/qr?k=7tPR4X-U1ZVL0nPvkrPEJDFZJK1pIF68&noverify=0")
-    createrQQ.bind("<Button-1>", startAddQQ)
     createrQQ.config(state="readonly")
-    createrQQ.grid(row=1,column=1,sticky="W")
+    createrQQ.grid(row=3,column=1,sticky="W")
     
     createrUrlTitle=tkinter.Label(messageBox,text="作者主页:")
-    createrUrlTitle.grid(row=2,column=0,sticky="W",pady=2)
-    createrUrl=tkinter.Entry(messageBox,fg="blue")
+    createrUrlTitle.grid(row=4,column=0,sticky="W",pady=2)
+    createrUrl=tkinter.Entry(messageBox,fg="blue",cursor="hand2")
     createrUrl.insert(0,"宽宽2007的小天地")
     def startURL(event):
         os.system("start https://kuankuan2007.gitee.io")
     createrUrl.bind("<Button-1>", startURL)
     createrUrl.config(state="readonly")
-    createrUrl.grid(row=2,column=1,sticky="W")
+    createrUrl.grid(row=4,column=1,sticky="W")
 
     createrGiteeTitle=tkinter.Label(messageBox,text="作者Gitee:")
-    createrGiteeTitle.grid(row=3,column=0,sticky="W",pady=2)
-    createrGitee=tkinter.Entry(messageBox,fg="blue")
+    createrGiteeTitle.grid(row=5,column=0,sticky="W",pady=2)
+    createrGitee=tkinter.Entry(messageBox,fg="blue",cursor="hand2")
     createrGitee.insert(0,"宽宽2007")
     def startGitee(event):
         os.system("start https://gitee.com/kuankuan2007")
     createrGitee.bind("<Button-1>", startGitee)
     createrGitee.config(state="readonly")
-    createrGitee.grid(row=3,column=1,sticky="W")
+    createrGitee.grid(row=5,column=1,sticky="W")
 
     createrWeiXinPayTitle=tkinter.Label(messageBox,text="赞助作者")
-    createrWeiXinPayTitle.grid(row=4,column=0,sticky="W",pady=2)
-    createrWeiXinPay=tkinter.Entry(messageBox,fg="blue")
+    createrWeiXinPayTitle.grid(row=6,column=0,sticky="W",pady=2)
+    createrWeiXinPay=tkinter.Entry(messageBox,fg="blue",cursor="hand2")
     createrWeiXinPay.insert(0,"微信支付")
     def startWeiXinPayTitle(event):
         os.system("start https://kuankuan2007.gitee.io/WeiXinPay.png")
     createrWeiXinPay.bind("<Button-1>", startWeiXinPayTitle)
     createrWeiXinPay.config(state="readonly")
-    createrWeiXinPay.grid(row=4,column=1,sticky="W")
+    createrWeiXinPay.grid(row=6,column=1,sticky="W")
 
     auboutScreen.mainloop()
 
@@ -232,7 +249,7 @@ def doArgv():
     argv =argv[1:]
     for i in range(len(argv)):
         if argv[i] in ["-h","help","/h","/?","/help"]:
-            os.system("start https://gitee.com/kuankuan2007/ghm-base64-encoder")
+            os.system("start https://kuankuan2007.gitee.io/docs/ghm-base64-encoder/")
             return
         else:
             files=[]
