@@ -16,9 +16,9 @@
 
 + 类型标识符
   
-  + 文件 **#FILE[|文件名]**
+     + 文件 **#FILE[|文件名]**
   
-  + 文本 **#TEXT**
+     + 文本 **#TEXT**
 
 + 尾部标识符 **#END OF DOCUMENT**
 
@@ -48,6 +48,6 @@ ABC                                              <mark>数据块3</mark>
 
 ## 关于作者
 
-作者[宽宽2007](kuankuan2007.gitee.io "作者主页")
+作者[宽宽2007](https://kuankuan2007.gitee.io "作者主页")
 
 本项目在[苟浩铭/ghm-base64编码器 (gitee.com)](https://gitee.com/kuankuan2007/ghm-base64-encoder)上开源
