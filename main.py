@@ -161,7 +161,7 @@ def encodingFiles(files):
                 title2.config(text="正在处理:")
                 f.write("#SAVING WITH GHM-BASE64")
                 for i in range(len(content)):
-                    progressbar.config(value=(i+1)/(len(content)*100))
+                    progressbar.config(value=(i+1)*100/(len(content)))
                     title1.config(text="进度:正在编码(%d/%d)"%(i+1,len(content)))
                     i=content[i]
                     title2.config(text=f"正在处理:{i[1]}")
